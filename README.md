@@ -118,24 +118,6 @@ Yarn equivalents: `yarn`, `yarn dev`, `yarn build`, `yarn preview`, `yarn lint`.
    - The AI message is appended, typing indicator is cleared, and the list auto‑scrolls.
 4. AI messages render through `MarkdownRenderer` to support lists, code blocks, and links.
 
-### User flow diagram
-
-```mermaid
-flowchart TD
-  A[App mounts] --> B[Header + OptionsPanel]
-  A --> C[Initial AI greeting in messages]
-  D[User types in MessageComposer] -->|Enter or Send| E[handleSendMessage]
-  E --> F[Append user message]
-  E --> G[Set isTyping + small delay]
-  G --> H[AIAgent.generateResponse(message, options, attachments)]
-  H --> I[Append AI message; clear isTyping]
-  I --> J[MessageBubble renders; AI via MarkdownRenderer]
-  K[OptionsPanel changes] -->|onOptionsChange| L[setOptions in App]
-  L --> H
-  M[Attach files (drag/drop or picker)] --> N[attachments state]
-  N --> H
-```
-
 ### Component interactions and controls
 - **Options affect output**:
   - **Response Length**: can bias style (e.g., short → quip, long → summary with more detail).
