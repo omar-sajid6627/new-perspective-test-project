@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Force black text for AI messages */
+.ai-message-text {
+  color: #000000 !important;
+}
+
+.ai-message-text * {
+  color: #000000 !important;
+}
+
+.ai-message-text p {
+  color: #000000 !important;
+}
+
+.ai-message-text h1,
+.ai-message-text h2,
+.ai-message-text h3,
+.ai-message-text h4,
+.ai-message-text h5,
+.ai-message-text h6 {
+  color: #000000 !important;
+}
+
+.ai-message-text strong {
+  color: #000000 !important;
+}
+
+.ai-message-text li {
+  color: #000000 !important;
+}
+
+/* Custom slider styles for amber theme */
+.slider-amber::-webkit-slider-thumb {
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #f59e0b;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.slider-amber::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #f59e0b;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Custom checkbox styles for amber theme */
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #ffffff;
+  border: 2px solid #f59e0b;
+  border-radius: 4px;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  position: relative;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #f59e0b;
+  border-color: #f59e0b;
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m13.854 3.646-7.5 7.5a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6 10.293l7.146-7.147a.5.5 0 0 1 .708.708z'/%3e%3c/svg%3e");
+  background-size: 14px 14px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+input[type="checkbox"]:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2);
+}
+
+input[type="checkbox"]:hover {
+  border-color: #d97706;
+}
+
+/* Responsive code blocks */
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Textarea word wrapping */
+textarea {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
